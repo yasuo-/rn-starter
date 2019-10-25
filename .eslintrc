@@ -1,0 +1,26 @@
+{
+    "extends": [
+        "airbnb",
+        "prettier",
+        "prettier/@typescript-eslint",
+        "prettier/babel",
+        "prettier/flowtype",
+        "prettier/react"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "flowtype",
+        "prettier",
+        "react",
+        "jsx-a11y", 
+        "import"
+    ],
+    "env": { "browser": true, "node": true, "es6": true },
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "parser": "babel-eslint",
+    "rules": {
+        "prettier/prettier": ["error"]
+    }
+}
