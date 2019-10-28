@@ -1,0 +1,36 @@
+import { createSlice, PayloadAction } from 'redux-starter-kit';
+
+
+// init state
+const todoInitialState = {
+  nextTodoId: 0,
+  list: []
+}
+
+
+const {{properCase name }}Module = createSlice({
+  name: "{{properCase name }}",
+  initialState: todoInitialState,
+  reducers: {
+    // add
+    add{{properCase name }}: (state, action) => {
+      const todo = {
+        id: state.nextTodoId++,
+        text: action.payload,
+        completed: false
+      };
+      state.list.push(todo);
+    },
+
+    // completedの{{properCase name }}
+    toggle{{properCase name }}: (state, action) => {
+      const id = action.payload;
+      state.list.forEach(todo => {
+        todo.completed = todo.id === id ? !todo.completed : todo.completed;
+      });
+    }
+
+  }
+})
+
+export default {{properCase name }}Module;

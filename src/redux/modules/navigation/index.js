@@ -1,7 +1,7 @@
-import { NavigationActions } from 'react-navigation';
+import {NavigationActions} from 'react-navigation';
 import includes from 'lodash/includes';
 
-import AppNavigator from '../../navigation/RootNavigation';
+import AppNavigator from 'app/src/navigation/RootNavigation';
 
 export default function NavigatorReducer(state, action) {
   // Initial state

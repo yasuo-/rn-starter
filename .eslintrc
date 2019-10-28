@@ -4,15 +4,13 @@
         "prettier",
         "prettier/@typescript-eslint",
         "prettier/babel",
-        "prettier/flowtype",
         "prettier/react"
     ],
     "plugins": [
         "@typescript-eslint",
-        "flowtype",
         "prettier",
         "react",
-        "jsx-a11y", 
+        "jsx-a11y",
         "import"
     ],
     "env": { "browser": true, "node": true, "es6": true },
@@ -21,6 +19,8 @@
     },
     "parser": "babel-eslint",
     "rules": {
-        "prettier/prettier": ["error"]
+        "prettier/prettier": ["error"],
+        "import/no-extraneous-dependencies": 0,
+        "import/no-unresolved": 0
     }
 }

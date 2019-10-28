@@ -20,9 +20,14 @@ export default function HomeScreen(props) {
             onPress={() => props.navigation.navigate('Page')}
           />
           <Button
-            title="ページ遷移Sample"
+            title="ページ遷移Sample Counter"
             type="outline"
-            onPress={() => props.navigation.navigate('Sample')}
+            onPress={() => props.navigation.navigate('SampleCounter')}
+          />
+           <Button
+            title="ページ遷移Sample Todo"
+            type="outline"
+            onPress={() => props.navigation.navigate('SampleTodo')}
           />
         </View>
     </View>

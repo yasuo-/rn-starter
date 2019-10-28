@@ -1,0 +1,12 @@
+//jsconfig.json
+// vscode setting
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "app/*": ["./*"]
+    },
+    "jsx": "react"
+  }
+}
