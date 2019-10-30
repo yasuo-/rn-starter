@@ -1,7 +1,8 @@
 import React from 'react';
-import {StatusBar, StyleSheet, View, UIManager} from 'react-native';
+import {StyleSheet, View, UIManager} from 'react-native';
 import {AppLoading} from 'expo';
 import {Provider} from 'react-redux';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import RootNavigation from './src/containers/Navigation';
 import Colors from './src/constants/Colors';
 import store from './src/redux/store';
@@ -34,10 +35,8 @@ export default class App extends React.Component {
   };
 
   render() {
-    // eslint-disable-next-line react/prop-types
     if (!this.state.isLoadingComplete && !this.props.skipLoadingScreen) {
       return (
-        // eslint-disable-next-line react/jsx-filename-extension
         <AppLoading
           startAsync={this._loadResourcesAsync}
           onError={this._handleLoadingError}
@@ -47,10 +46,11 @@ export default class App extends React.Component {
     }
     return (
       <Provider store={store}>
-        <View style={styles.container}>
-          <StatusBar barStyle="light-content" backgroundColor={Colors.watermelon} />
-          <RootNavigation />
-        </View>
+        <SafeAreaProvider>
+          <View style={styles.container}>
+            <RootNavigation />
+          </View>
+        </SafeAreaProvider>
       </Provider>
     );
   }

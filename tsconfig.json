@@ -8,6 +8,7 @@
     "target": "es5",
     "noImplicitAny": false,
     "sourceMap": false,
-    "jsx": "react"
+    "jsx": "react",
+    "esModuleInterop": true /* CommonJSモジュールとESモジュール間の相互運用性を,すべてのインポート用に名前空間オブジェクトを作成することで可能にします。 「allowSyntheticDefaultImports」を暗示します。 */
   }
 }
