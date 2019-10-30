@@ -9,7 +9,7 @@ import {Entypo as Icon} from '@expo/vector-icons';
 import {Colors, Fonts} from '../constants';
 
 
-export default function PagesScreen(props) {
+export default function PagesScreen(props: any) {
   return (
     <View style={styles.container}>
       <View style={styles.row}>

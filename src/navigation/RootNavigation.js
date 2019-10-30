@@ -1,25 +1,25 @@
-/* eslint-disable import/no-unresolved */
-import {createAppContainer, createStackNavigator, createSwitchNavigator} from 'react-navigation';
-// sample
-import SampleScreen from 'app/src/screens/Sample/SampleScreen';
-import SampleTodoScreen from 'app/src/screens/Sample/TodosScreen';
+import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 
-import HomeScreen from 'app/src/containers/HomeScreen';
-import PageScreen from 'app/src/containers/PagesScreen';
+// AuthLoadingScreen
+import AuthLoadingScreen from 'app/src/screens/AuthLoadingScreen';
 
-const stackNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen,
-  },
-  Page: {
-    screen: PageScreen,
-  },
-  SampleCounter: {
-    screen: SampleScreen,
-  },
-  SampleTodo: {
-    screen: SampleTodoScreen,
-  },
-});
+// Auth
+import AuthStackNavigator from './AuthStackNavigator';
 
-export default createAppContainer(stackNavigator);
+// App
+import AppStackNavigator from './App/AppStackNavigator';
+
+
+
+export default createAppContainer(
+  createSwitchNavigator(
+    {
+      AuthLoading: AuthLoadingScreen,
+      Home: AppStackNavigator,
+      Auth: AuthStackNavigator,
+    },
+    {
+      initialRouteName: 'AuthLoading',
+    }
+  )
+);

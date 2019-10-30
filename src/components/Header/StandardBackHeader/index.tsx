@@ -3,7 +3,7 @@ import { NavBar } from 'galio-framework';
 
 
 export interface StandardBackHeaderProps {
-  title: string;
+  title?: string;
 }
 
 /**

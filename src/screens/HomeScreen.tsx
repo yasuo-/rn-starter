@@ -22,7 +22,7 @@ export default function HomeScreen(props) {
           <Button
             title="ページ遷移Sample Counter"
             type="outline"
-            onPress={() => props.navigation.navigate('SampleCounter')}
+            onPress={() => props.navigation.push('SampleCounter')}
           />
            <Button
             title="ページ遷移Sample Todo"
