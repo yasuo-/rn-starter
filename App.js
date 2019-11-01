@@ -4,7 +4,6 @@ import {AppLoading} from 'expo';
 import {Provider} from 'react-redux';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import RootNavigation from './src/containers/Navigation';
-import Colors from './src/constants/Colors';
 import store from './src/redux/store';
 
 export default class App extends React.Component {

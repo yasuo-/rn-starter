@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export interface CheckWithTagProps {
   label: string;
-  onPress: void;
+  onPress?: () => void;
 }
 
 /**

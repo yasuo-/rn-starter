@@ -6,7 +6,7 @@ import {
   Text,
 } from 'react-native';
 import {Entypo as Icon} from '@expo/vector-icons';
-import {Colors, Fonts} from '../constants';
+import {Theme, Fonts} from '../constants';
 
 
 export default function PagesScreen(props: any) {
@@ -22,7 +22,7 @@ export default function PagesScreen(props: any) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: Colors.white,
+    backgroundColor: Theme.COLORS.WHITE,
     paddingTop: 10,
   },
   row: {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 120,
     paddingVertical: 20,
-    borderColor: Colors.primaryLight,
+    borderColor: Theme.COLORS.PRIMARY,
     borderWidth: 1,
     borderRadius: 5,
     alignItems: 'center',
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
   },
   itemText: {
-    color: Colors.primary,
+    color: Theme.COLORS.PRIMARY,
     fontFamily: Fonts.primary,
   },
   itemImage: {

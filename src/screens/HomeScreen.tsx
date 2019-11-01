@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 
-import { Fonts, Colors } from '../constants';
+import { Fonts } from '../constants';
 
 
 export default function HomeScreen(props) {
